@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nepali Typing</title>
     <style>
+       :root {
+      --shade-green: #23867f;
+      --shade-white: #f4f4f9;
+      --light: #f6f6f9;
+      --white: #fff;
+      --dark: #363949;
+      --crimson: crimson;
+      --light-success: #45a049;
+      --success: #45a049;
+    }
       body {
         font-family: 'Merriweather', serif;
         margin: 0;
@@ -90,6 +100,32 @@
       .group-char:hover {
         text-decoration: underline;
       }
+      footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: var(--dark);
+      color: var(--light);
+      text-align: center;
+      user-select: none;
+    }
+
+    footer span {
+      font-style: italic;
+      font-size: small;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    footer span a {
+      color: var(--crimson);
+    }
+
+    footer span a:hover {
+      text-decoration: underline;
+    }
     </style>
   </head>
   <body>
@@ -97,6 +133,15 @@
     <div id="optionsContainer">
       <ul id="suggestions"></ul>
     </div>
+    <footer>
+      <span
+        ><i>&copy;</i><span id="date"></span
+        ><a href="https://darpanadhikari.com.np" target="_blank">
+          DarpanAdhikari</a
+        >
+        || All right reserved</span
+      >
+    </footer>
     <script type="module" src="index.js"></script>
   </body>
 </html>
