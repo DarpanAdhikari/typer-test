@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nepali Typing</title>
+    <style>
+      body {
+        font-family: 'Merriweather', serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #ffe4e1, #e0e0ff);
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      #typing {
+        width: 60%;
+        height: 50vh;
+        border: 2px solid #a67c52;
+        border-radius: 10px;
+        padding: 15px;
+        font-size: 16px;
+        font-family: 'Noto Serif', serif;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        resize: none;
+        background: #fffaf0;
+        outline: transparent;
+      }
+
+      #optionsContainer {
+        position: absolute;
+        top: 15%;
+        right: 10%;
+        width: 25%;
+      }
+
+      #suggestions {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        border: 2px solid #a67c52;
+        border-radius: 10px;
+        max-height: 314px;
+        overflow-y: auto;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      #suggestions::-webkit-scrollbar {
+        width: 5px;
+      }
+
+      #suggestions::-webkit-scrollbar-thumb {
+        background: #a67c52;
+        border-radius: 10px;
+      }
+
+      #suggestions li {
+        padding: 8px 12px;
+        font-size: 14px;
+        cursor: pointer;
+        font-family: 'Noto Serif', serif;
+        color: #444;
+      }
+
+      #suggestions li:hover {
+        background-color: #f0e5d8;
+      }
+
+      .group-char {
+        display: inline;
+        font-weight: bold;
+        color: #003366;
+        cursor: pointer;
+      }
+
+      .group-char.optionsBack {
+        background: #a67c52;
+        color: #fff;
+        position: sticky;
+        top: 0;
+        left: 80.4%;
+        padding: 5px;
+      }
+
+      .group-char:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="typing" placeholder="Start typing in Nepali..." autofocus></textarea>
+    <div id="optionsContainer">
+      <ul id="suggestions"></ul>
+    </div>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
